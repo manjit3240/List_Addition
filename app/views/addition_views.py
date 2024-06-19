@@ -3,9 +3,6 @@ from multiprocessing import Pool
 def add_numbers(numbers):
     return sum(numbers)
 
-def flatten_list(nested_list):
-    return [item for sublist in nested_list for item in sublist]
-
 def perform_addition(request):
     numbers_list = request.payload
 
