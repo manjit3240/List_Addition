@@ -8,7 +8,6 @@ def flatten_list(nested_list):
 
 def perform_addition(request):
     numbers_list = request.payload
-    flattened_list = flatten_list(numbers_list)
 
     if not all(isinstance(sublist, list) and all(isinstance(num, int) for num in sublist) for sublist in numbers_list):
         raise ValueError("All elements must be lists of integers")
